@@ -24,11 +24,18 @@ function calculate() {
     }
 }
 
-/* Theme toggle */
+/* Theme toggle (FIXED PROPERLY) */
 function toggleTheme() {
     document.body.classList.toggle("dark");
-    document.body.classList.toggle("light");
+
+    // IMPORTANT: keep only one active theme
+    if (document.body.classList.contains("dark")) {
+        document.body.classList.remove("light");
+    } else {
+        document.body.classList.add("light");
+    }
 }
 
 /* Default theme */
 document.body.classList.add("dark");
+document.body.classList.remove("light");

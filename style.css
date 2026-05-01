@@ -26,12 +26,15 @@ body.dark {
     padding: 20px;
     border-radius: 15px;
     background: #1e1e2f;
+    transition: 0.3s;
 }
 
+/* LIGHT calculator */
 body.light .calculator {
     background: white;
 }
 
+/* DISPLAY FIX (MOST IMPORTANT FIX) */
 #display {
     width: 100%;
     height: 50px;
@@ -39,14 +42,29 @@ body.light .calculator {
     font-size: 22px;
     text-align: right;
     padding: 5px;
+
+    border: none;
+    outline: none;
+
+    /* DEFAULT (light mode) */
+    color: black;
+    background: #f9f9f9;
 }
 
+/* DARK MODE DISPLAY FIX */
+body.dark #display {
+    background: #2a2a2a;
+    color: white;   /* 🔥 THIS FIXES YOUR BUG */
+}
+
+/* BUTTON GRID */
 .buttons {
     display: grid;
     grid-template-columns: repeat(4, 60px);
     gap: 10px;
 }
 
+/* BUTTON STYLE */
 button {
     height: 50px;
     border: none;
@@ -56,6 +74,7 @@ button {
     transition: 0.2s;
 }
 
+/* hover effect */
 button:hover {
     opacity: 0.8;
 }
@@ -77,6 +96,7 @@ button:nth-child(4n) {
     cursor: pointer;
 }
 
+/* credit */
 .credit {
     margin-top: 15px;
     font-size: 14px;
