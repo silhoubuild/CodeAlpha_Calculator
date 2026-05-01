@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    transition: 0.3s;
+}
+
+/* LIGHT MODE */
+body.light {
+    background: #f2f2f2;
+    color: black;
+}
+
+/* DARK MODE */
+body.dark {
+    background: #121212;
+    color: white;
+}
+
+.container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.calculator {
+    display: inline-block;
+    padding: 20px;
+    border-radius: 15px;
+    background: #1e1e2f;
+}
+
+body.light .calculator {
+    background: white;
+}
+
+#display {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 10px;
+    font-size: 22px;
+    text-align: right;
+    padding: 5px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 60px);
+    gap: 10px;
+}
+
+button {
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+button:active {
+    transform: scale(0.9);
+}
+
+/* operator buttons */
+button:nth-child(4n) {
+    background: orange;
+    color: white;
+}
+
+/* toggle button */
+.toggle {
+    margin-bottom: 15px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.credit {
+    margin-top: 15px;
+    font-size: 14px;
+}
